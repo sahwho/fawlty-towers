@@ -98,6 +98,11 @@ public class TowersTests {
 		
 		Collections.sort(buffer);
 		
+		//push back onto s so s doesn't wind up empty, causing an empty stack exception and therefore crashing
+		for (int i=secondary.size()-1; i>=0; i--) {
+			s.push(secondary.get(i));
+		}
+		
 		return buffer.equals(secondary);
 	}
 }
