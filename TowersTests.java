@@ -79,7 +79,7 @@ public class TowersTests {
 			// with src=0, dst=2: 3-0-2 = 1. (this gives us the second stack (index 1), which is correct)
 			// with src=0, dst=1: 3-0-1 = 2. (this gives us the third stack (index 2), which is correct)
 			
-			assertTrue("when the source is not the destination, the buffer stack winds up empty", towers.get(3-destinationIndex).isEmpty());
+			assertTrue("when the source is not the destination, the buffer stack winds up empty", towers.get(3-(destinationIndex-1)).isEmpty());
 		}
 	}
 
